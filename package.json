@@ -4,14 +4,16 @@
   "main": "src/index.ts",
   "repository": "git@github.com:AntonioNarcilio/what-am-i-studying.git",
   "author": "@antonionarcilio",
-  "license": "false",
+  "license": "unlicensed",
   "private": true,
   "scripts": {
-    "start": "ts-node-dev --transpile-only --ignore-watch node_modules ."
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules ."
   },
   "dependencies": {
     "apollo-server": "^3.3.0",
-    "graphql": "^15.6.0"
+    "colors": "^1.4.0",
+    "graphql": "^15.6.0",
+    "mongoose": "^6.0.9"
   },
   "devDependencies": {
     "ts-node-dev": "^1.1.8",

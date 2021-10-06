@@ -7,7 +7,7 @@
     </tr>
     <tr>
       <td>Repository</td>
-      <td olspan="2">Topics</td>
+      <td colspan="2">Topics</td>
     </tr>
     <tr>
       <td align="center" rowspan="3"><a href="https://github.com/AntonioNarcilio/what-am-i-studying/tree/graphql-api-crud">go</a></td>

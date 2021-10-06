@@ -4,4 +4,4 @@ import resolvers from "./graphql/resolvers";
 
 
 
-startServer({ typeDefs, resolvers })
+startServer({ typeDefs, resolvers });

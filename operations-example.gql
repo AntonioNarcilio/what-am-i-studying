@@ -1,0 +1,127 @@
+###############################################################################
+
+#  USERS
+
+# GET ALL USERS
+query {
+  users {
+    _id
+    firstName
+    lastName
+    email
+  }
+}
+# GET USER BY ID
+query {
+  user(id: "615cdb05cc12e17c5b3fed2e") {
+    firstName
+    lastName
+    email
+    active
+  }
+}
+
+query {
+  user(id: "615cdb05cc12e17c5b3fed2e") {
+    fullName
+  }
+}
+
+# CREATE NEW USER
+mutation {
+  createUser(
+    data: {
+      firstName: "Lucas"
+      lastName: "Jamaica"
+      email: null
+      active: false
+    }
+  ) {
+    _id
+    firstName
+    lastName
+    email
+  }
+}
+# UPDATE USER
+mutation {
+  updateUser(
+    id: "615cdb05cc12e17c5b3fed2e"
+    data: { firstName: "Luiza", lastName: "Lua", email: null, active: false }
+  ) {
+    firstName
+    lastName
+    email
+  }
+}
+# DELETE USER
+mutation {
+  deleteUser(id: "615cdb16cc12e17c5b3fed30")
+}
+
+###############################################################################
+# POST
+
+# GET ALL POSTS
+query {
+  posts {
+    _id
+    title
+    content
+    author {
+      fullName
+    }
+  }
+}
+
+# GET POST BY ID
+query {
+  post(id: "615cecd97c68e68c50616b73") {
+    title
+    author {
+      _id
+      fullName
+    }
+  }
+}
+
+# CREATE NEW POST
+mutation {
+  createPost(
+    data: {
+      title: "novo post"
+      content: "tt"
+      author: "615ce1b7ab3847afba6edb23"
+    }
+  ) {
+    _id
+    title
+    content
+    author {
+      fullName
+    }
+  }
+}
+
+# UPDATE POST
+mutation {
+  updatePost(
+    id: "615cedfc7c68e68c50616c5d"
+    data: {
+      title: "Titulo alterado"
+      content: "Conteudo alterado"
+      author: "615cdb05cc12e17c5b3fed2e"
+    }
+  ) {
+    title
+    content
+    author {
+      fullName
+    }
+  }
+}
+
+# DELETE POST
+mutation {
+  deletePost(id: "615cedfc7c68e68c50616c5d")
+}

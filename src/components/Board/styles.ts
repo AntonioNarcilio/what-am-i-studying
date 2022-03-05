@@ -19,7 +19,7 @@ export const BoardContainer = styled.div`
   .board {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 95%;
+    width: 69vh;
     margin-bottom: 2rem;
   }
 

@@ -1,5 +1,18 @@
-###  What am i studying / O que estou estudando 🤔
+### What am i studying 🤔
 
-<a href="https://github.com/AntonioNarcilio/what-am-i-studying/tree/graphql"><img src="https://img.shields.io/badge/GraphQL-e535ab?style=flat&logo=Graphql&logoColor=white" /></a>
-<a href="https://github.com/AntonioNarcilio/what-am-i-studying/tree/jest"><img src="https://img.shields.io/badge/Jest-C21325?style=flat&logo=Jest&logoColor=white" /></a>
-<a href="https://github.com/AntonioNarcilio/what-am-i-studying/tree/react"><img src="https://img.shields.io/badge/React-2D59F9?style=flat&logo=React&logoColor=white" /></a>
+<table>
+  <tbody>
+    <tr>
+      <th colspan="3">Studied content</th>
+    </tr>
+    <tr>
+      <td>Repository</td>
+      <td align="center" colspan="2">Topics</td>
+    </tr>
+    <tr>
+      <td align="center" rowspan="3"><a href="https://github.com/AntonioNarcilio/what-am-i-studying/tree/react-use-reducer">go</a></td>
+      <td>useReducer</td>
+      <td>contextAPI</td>
+    </tr>
+  </tbody>
+</table>

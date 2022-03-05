@@ -1,3 +1,4 @@
+import React from 'react';
 // others
 import { GameContextProvider } from '@/contexts/GameContext';
 import Board from '@/components/Board';

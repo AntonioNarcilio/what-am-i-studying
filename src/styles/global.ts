@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
 
     ::-webkit-scrollbar {
       width: 0rem;
+      height: 0rem;
     }
   }
 

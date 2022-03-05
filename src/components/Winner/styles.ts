@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
 export const WinnerWrapper = styled.p`
-  font-size: calc(30px + .5vw);
-  color: green;
+  font-size: 1.6rem;
+  color: ${(props) => props.theme.colors.green[500]};
 `;

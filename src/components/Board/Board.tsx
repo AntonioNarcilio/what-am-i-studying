@@ -29,13 +29,16 @@ export default function Board() {
       <Winner />
       <Reset />
 
-      <div className="board">
-        {squares.map((value:string, index:number) => (
-          <Square value={value} index={index} key={uuid()} />
-        ))}
-      </div>
+      <div className="wrapper">
+        <div />
+        <div className="board">
+          {squares.map((value:string, index:number) => (
+            <Square value={value} index={index} key={uuid()} />
+          ))}
+        </div>
 
-      <History />
+        <History />
+      </div>
     </BoardContainer>
   );
 }

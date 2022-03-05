@@ -6,11 +6,12 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '@/styles/global';
 import HomePage from '@/pages/Home';
 // styles, others
-import dark from '@/themes/dark';
+// import dark from '@/themes/dark';
+import light from '@/themes/light';
 
 function App() {
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={light}>
       <BrowserRouter>
         <GlobalStyle />
         <Routes>

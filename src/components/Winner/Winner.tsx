@@ -9,7 +9,9 @@ export default function Winner() {
 
   if (!whoIsWinner) {
     return (
-      <WinnerWrapper />
+      <WinnerWrapper>
+        <span style={{ opacity: 0 }}>nada para mostrar</span>
+      </WinnerWrapper>
     );
   }
 

@@ -3,7 +3,7 @@ import { v4 as uuid } from 'uuid';
 // others
 import { GameContext } from '@/contexts/GameContext';
 // styles
-import { HistoryWrapper } from './styles';
+import { HistoryContainer, HistoryWrapper } from './styles';
 
 export default function History() {
   const {
@@ -25,7 +25,7 @@ export default function History() {
   }
 
   return (
-    <>
+    <HistoryContainer>
       {history.map((data:any, index: number) => (
         <HistoryWrapper key={uuid()}>
           <button type="button" onClick={() => handleClick(index)}>
@@ -35,6 +35,6 @@ export default function History() {
           </button>
         </HistoryWrapper>
       ))}
-    </>
+    </HistoryContainer>
   );
 }

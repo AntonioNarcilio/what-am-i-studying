@@ -1,7 +1,17 @@
-import { Container } from './styles';
+// others
+import { GameContextProvider } from '@/contexts/GameContext';
+import Board from '@/components/Board';
+// styles
+import { HomeContainer } from './styles';
 
 function HomePage() {
-  return <Container>Hello</Container>;
+  return (
+    <GameContextProvider>
+      <HomeContainer>
+        <Board />
+      </HomeContainer>
+    </GameContextProvider>
+  );
 }
 
 export default HomePage;

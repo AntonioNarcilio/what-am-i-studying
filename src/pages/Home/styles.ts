@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const HomeContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
 `;

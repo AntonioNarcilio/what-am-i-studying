@@ -3,16 +3,22 @@
 		"browser": true,
 		"es2021": true
 	},
-	"extends": ["plugin:react/recommended", "airbnb"],
-	"parser": "@typescript-eslint/parser",
+	"extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb-typescript"
+  ],
+	"parser":
+    "@typescript-eslint/parser",
 	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
 		"ecmaVersion": 12,
-		"sourceType": "module"
+		"sourceType": "module",
+    "project": ["./tsconfig.json"]
 	},
-	"plugins": ["react", "@typescript-eslint"],
+	"plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
 	"rules": {
     "no-restricted-exports": "off",
 		"react/jsx-filename-extension": [
@@ -35,22 +41,27 @@
 		],
     "import/no-webpack-loader-syntax": "off",
 		"import/extensions": [
-			"error",
+			0,
 			"ignorePackages",
 			{
 				"js": "never",
-				"mjs": "never",
 				"jsx": "never",
+				"mjs": "never",
 				"ts": "never",
-				"tsx": "never",
-				"vue": "never"
+				"tsx": "never"
 			}
 		]
 	},
 	"settings": {
 		"import/resolver": {
 			"node": {
-				"extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".vue"]
+				"extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".json"
+        ]
 			}
 		}
 	}

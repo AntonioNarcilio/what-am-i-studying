@@ -1,6 +1,6 @@
 {
   "name": "template-react-ts",
-  "version": "0.1.0",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "setup": "yarn install",
@@ -42,10 +42,12 @@
     "react-scripts": "5.0.0",
     "styled-components": "^5.3.3",
     "typescript": "^4.4.2",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.0"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.21",
+    "@types/uuid": "^8.3.4",
     "craco": "^0.0.3",
     "eslint": "^8.8.0",
     "eslint-config-airbnb": "^19.0.4",

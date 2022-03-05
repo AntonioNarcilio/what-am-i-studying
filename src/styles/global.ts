@@ -15,6 +15,11 @@ export const GlobalStyle = createGlobalStyle`
     background-color: ${(props) => props.theme.colors.primary};
     color: ${(props) => props.theme.colors.text};
     font-size: 1.6rem; // 16px
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar {
+      width: 0rem;
+    }
   }
 
   body,
@@ -28,6 +33,11 @@ export const GlobalStyle = createGlobalStyle`
   a {
     color: inherit; /* herda a cor do container dos links */
     text-decoration: none;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 20px;
   }
 
 `;

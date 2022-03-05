@@ -24,20 +24,26 @@
         "*":[
            "node_modules/*"
         ],
-        "@/themes/*":[
-          "./themes/*"
-        ],
-        "@/styles/*":[
-          "./styles/*"
-        ],
-        "@/pages/*":[
-          "./pages/*"
+        "@/contexts/*":[
+          "./contexts/*"
         ],
         "@/components/*":[
           "./components/*"
         ],
+        "@/pages/*":[
+          "./pages/*"
+        ],
+        "@/styles/*":[
+          "./styles/*"
+        ],
+        "@/themes/*":[
+          "./themes/*"
+        ],
         "@/types/*":[
           "./@types/*"
+        ],
+        "@/utils/*":[
+          "./utils/*"
         ]
      }
   },

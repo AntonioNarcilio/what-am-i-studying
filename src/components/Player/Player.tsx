@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import { GameContext } from '@/contexts/GameContext';
 
 export default function Player() {
-  const { isXNext } = useContext(GameContext).state;
+  const { state: { isXNext } } = useContext(GameContext);
 
   return (
     <h1>

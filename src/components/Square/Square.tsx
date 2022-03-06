@@ -8,14 +8,13 @@ import { SquareButton } from './styles';
 
 export default function Square({ value, index }: SquareTypes) {
   const {
-    squares,
-    setSquares,
-    isXNext,
-    setIsXNext,
-    whoIsWinner,
-    history,
-    setHistory,
-  } = useContext(GameContext).state;
+    state: {
+      squares,
+      isXNext,
+      whoIsWinner,
+    },
+    dispatch,
+  } = useContext(GameContext);
 
   function handleClick() {
     if (squares[index]) return;
@@ -23,17 +22,8 @@ export default function Square({ value, index }: SquareTypes) {
 
     const newSquares = [...squares];
     newSquares[index] = isXNext ? 'X' : 'O';
-    setSquares(newSquares);
-    setIsXNext(!isXNext);
 
-    setHistory([
-      ...history,
-      {
-        squares: [...squares],
-        isXNext,
-        whoIsWinner,
-      },
-    ]);
+    dispatch({ type: 'UPDATE_SQUARES', payload: newSquares });
   }
 
   return (

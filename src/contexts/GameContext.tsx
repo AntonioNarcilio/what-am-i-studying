@@ -1,29 +1,18 @@
 import React from 'react';
+// others
+import GameReducer, { INITIAL_STATE } from '@/redux/GameReducer';
 // types
-import { ProviderTypes, ContextTypes, StateTypes } from '@/types/game-context.d';
+import { ProviderTypes, ContextTypes } from '@/types/game-context.d';
 
 const GameContext = React.createContext({} as ContextTypes);
 
 function GameContextProvider({ children }: ProviderTypes) {
-  const [squares, setSquares] = React.useState(Array(9).fill(null));
-  const [isXNext, setIsXNext] = React.useState(true);
-  const [whoIsWinner, setWhoIsWinner] = React.useState('');
-  const [history, setHistory] = React.useState<any[]>([]);
+  const [state, dispatch] = React.useReducer(GameReducer, INITIAL_STATE);
 
-  const state: StateTypes = {
-    squares,
-    setSquares,
-    isXNext,
-    setIsXNext,
-    whoIsWinner,
-    setWhoIsWinner,
-    history,
-    setHistory,
-  };
+  const value = React.useMemo(() => ({ state, dispatch }), [state, dispatch]);
 
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <GameContext.Provider value={{ state }}>
+    <GameContext.Provider value={value}>
       {children}
     </GameContext.Provider>
   );

@@ -13,15 +13,18 @@ import History from '@/components/History';
 import { BoardContainer } from './styles';
 
 export default function Board() {
-  const { squares, setWhoIsWinner, history } = React.useContext(GameContext).state;
+  const {
+    state: { squares, history },
+    dispatch,
+  } = React.useContext(GameContext);
 
   React.useEffect(() => {
     const winner = calculateWinner(squares);
 
     if (winner) {
-      setWhoIsWinner(winner);
+      dispatch({ type: 'UPDATE_WINNER', payload: winner });
     }
-  }, [history, setWhoIsWinner, squares]);
+  }, [history, squares]);
 
   return (
     <BoardContainer>

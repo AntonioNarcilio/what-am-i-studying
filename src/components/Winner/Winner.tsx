@@ -5,7 +5,7 @@ import { GameContext } from '@/contexts/GameContext';
 import { WinnerWrapper } from './styles';
 
 export default function Winner() {
-  const { whoIsWinner } = React.useContext(GameContext).state;
+  const { state: { whoIsWinner } } = React.useContext(GameContext);
 
   if (!whoIsWinner) {
     return (

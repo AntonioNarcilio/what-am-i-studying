@@ -1,22 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 // others
 import { GameContext } from '@/contexts/GameContext';
 // styles
 import { ResetWrapper } from './styles';
 
 export default function Board() {
-  const {
-    setSquares, setIsXNext,
-    setWhoIsWinner, setHistory,
-  } = useContext(
-    GameContext,
-  ).state;
+  const { dispatch } = React.useContext(GameContext);
 
   function handleClick() {
-    setSquares(Array(9).fill(null));
-    setIsXNext(true);
-    setWhoIsWinner('');
-    setHistory([]);
+    dispatch({ type: 'RESET' });
   }
 
   return (

@@ -7,21 +7,12 @@ import { HistoryContainer, HistoryWrapper } from './styles';
 
 export default function History() {
   const {
-    history,
-    setHistory,
-    setSquares,
-    setIsXNext,
-    setWhoIsWinner,
-  } = useContext(GameContext).state;
+    state: { history },
+    dispatch,
+  } = useContext(GameContext);
 
   function handleClick(index:number) {
-    const newHistory = [...history];
-    newHistory.splice(index, Number.MAX_SAFE_INTEGER);
-    setHistory(newHistory);
-
-    setSquares(history[index].squares);
-    setIsXNext(history[index].isXNext);
-    setWhoIsWinner(history[index].whoIsWinner);
+    dispatch({ type: 'UPDATE_HISTORY', payload: [history, index] });
   }
 
   return (
